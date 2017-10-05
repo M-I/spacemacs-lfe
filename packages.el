@@ -29,6 +29,12 @@
     (progn
       (add-hook 'lfe-mode-hook 'spacemacs/run-prog-mode-hooks))))
 
+(defun lfe/init-ob-lfe ()
+  (spacemacs|use-package-add-hook org
+    :post-config
+    (use-package ob-lfe
+      :init (add-to-list 'org-babel-load-languages '(lfe . t)))))
+
 (defun lfe/post-init-flycheck ()
   (spacemacs/add-flycheck-hook 'lfe-mode))
 
