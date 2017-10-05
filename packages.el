@@ -16,6 +16,7 @@
     ggtags
     helm-gtags
     flycheck
+    ob-lfe
     ))
 
 (defun lfe/post-init-company ()
